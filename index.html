@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard!</title>
+    <link
+      rel="stylesheet"
+      href="https://skeleton-framework.github.io/css/skeleton.css"
+    />
+    <script 
+    type="text/javascript"
+    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"
+    ></script>
+
+</head>
+<body>
+  <h1>Embedding Tableau</h1>  
+ 
+  <button id = "exportPDF">Generate PDF</button>
+  <button id = "exportImage">Generate Image</button>
+  
+  <p>Filter by Profit</p>
+  <input type="number" id="minValue" placeholder="min profit value" />
+  <input type="number" id="maxValue" placeholder="max profit value" />
+  <button id="applyFilter">Apply Filter</button>
+
+
+  <div id="vizContainer"></div>
+
+<script src="./app.js"></script>
+</body>
+</html>
