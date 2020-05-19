@@ -75,3 +75,14 @@ document.getElementById('applyFilter').addEventListener('click', function()
     getRangeValues();
 });
 
+document.getElementById("btn").addEventListener("click", clearFilters);
+
+function clearFilters() {
+    //get the workbook object
+    const workbook = viz.getWorkbook();
+    //get the active sheet in the window - this is the dashboard
+    const activeSheet = workbook.getActiveSheet().getWorksheets().get("map");
+    console.log(workbook.activeSheet)
+    activeSheet.clearFilterAsync("Profit");
+};
+
